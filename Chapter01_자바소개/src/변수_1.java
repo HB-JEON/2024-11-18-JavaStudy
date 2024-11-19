@@ -120,7 +120,7 @@
 *       int = long => 오류 발생
 *       double = int
 *                       
-*      데이터형 크기
+*      *** 데이터형 크기
 *      byte < short < int < long < float < double
 *             char
 *      정수 < 실수 (byte 크기로 결정되지 않음)
