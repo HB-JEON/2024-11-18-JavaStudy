@@ -138,7 +138,7 @@ public class 연산자_문제 {
 		int b=scan.nextInt();
 		
 		System.out.printf("%d %% %d = %d",a,b,a%b);
-		
+		System.out.println();
 		
 		 
 		
