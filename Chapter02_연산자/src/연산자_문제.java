@@ -117,7 +117,8 @@
 		
 		System.out.printf("%d * %d + %d = %d", a,b,c,(a*b+c));
  * 
- * 
+ *  11. 두 개의 정수를 입력 받아서 첫째 수를 둘째 수로 나눈 
+        나머지를 출력하는 프로그램을 작성해 보자.
  * 
  * 
  * 
@@ -136,7 +137,12 @@ public class 연산자_문제 {
 		int a=scan.nextInt();
 		int b=scan.nextInt();
 		
-		// System.out.printf("%d %% %d = %d", a,b,c,(a*b+c));
+		System.out.printf("%d %% %d = %d",a,b,a%b);
+		
+		
+		 
+		
+				
 		
 		
 	}
