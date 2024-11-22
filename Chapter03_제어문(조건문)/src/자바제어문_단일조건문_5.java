@@ -31,7 +31,7 @@ public class 자바제어문_단일조건문_5 {
 		System.out.println("영어 점수:"+eng);
 		System.out.println("수학 점수:"+math);
 		System.out.println("총 점:"+total);
-		System.out.printf("평균 점수:%2f\n",+avg);
+		System.out.printf("평균 점수:%.2f\n",+avg);
 		// \n (다음줄 출력) \t (일정간격) \\(경로 출력) \"(출력) %.2f\n
 		
 		char score='A';

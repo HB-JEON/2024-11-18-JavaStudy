@@ -42,8 +42,9 @@ public class 자바제어문_단일조건문_2 {
 		{
 			// 중첩 조건문 > 이중 if
 			if(num2==0)
-			if(num2!=0)
 				System.out.println("0으로 나눌 수 없다.");
+			if(num2!=0)
+				
 			System.out.printf("%d / %d = %d\n",num1,num2,num1/num2);
 		}
 		

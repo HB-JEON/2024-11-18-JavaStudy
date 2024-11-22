@@ -1,4 +1,4 @@
-
+/*
    1. 자바 설치
       path - c:\jdk-17.0.2 ==> java/javac
       classpath - 자바에서 지원하는 라이브러리를 사용
@@ -40,3 +40,5 @@ public class MainClass {
 	}
 
 }
+
+*/
