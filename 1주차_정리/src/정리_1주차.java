@@ -371,7 +371,7 @@ public class 정리_1주차 {
 			System.out.println(Arrays.toString(arr));
 			*/
 		
-		
+		 
 		
 	}
 	
