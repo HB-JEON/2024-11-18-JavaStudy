@@ -5,64 +5,58 @@ public class 연습장 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		/*
 		Scanner scan=new Scanner(System.in);
-		System.out.print("점수 입력:");
-		int score=scan.nextInt();
-		int avg=score/10; //0~10
+//		System.out.print("정수입력:");
+//		int score=scan.nextInt();
+//		
+//		switch(score/10)
+//		{
+//		case 9: case 10:
+//			System.out.println("A학점");
+//			break;
+//		case 8:
+//			System.out.println("B학점");
+//			break;
+//		case 7:
+//			System.out.println("C학점");
+//			break;
+//		case 6:
+//			System.out.println("D학점");
+//			break;
+//		default :
+//			System.out.println("F학점");
+//		}
+//		System.out.print("첫번째 정수입력:");
+//		int num1=scan.nextInt();
+//		System.out.print("두번째 정수입력:");
+//		int num2=scan.nextInt();
+//		System.out.print("연산자(+,-,*,/)입력:");
+//		
+//		switch(scan.next())
+//		{
+//		case "+":
+//			System.out.printf("%d + %d = %d ",num1,num2,num1+num2);
+//		break;
+//		case "-":
+//			System.out.printf("%d - %d = %d ",num1,num2,num1-num2);
+//		break;
+//		case "*":
+//			System.out.printf("%d * %d = %d ",num1,num2,num1*num2);
+//		break;
+//		case "/":
+//			if(num2==0)
+//				System.out.println("0으로 나눌 수 없음");
+//			else
+//				System.out.printf("%d / %d = %d ",num1,num2,num1/num2);
+//		}
 		
-		switch(avg)
-		{
-		case 9: case 10:
-			System.out.println(score+"점은 A등급 입니다.");
-			break;
-		case 8: 
-			System.out.println(score+"점은 B등급 입니다.");
-			break;
-		case 7:
-			System.out.println(score+"점은 C등급 입니다.");
-			break;
-		case 6:
-			System.out.println(score+"점은 D등급 입니다.");
-			break;
-		default:
-		System.out.println(score+"점은 F등급 입니다.");
-		}
-		*/
-		
-		/*
 		int sum=0;
-		for (int i=1;i<=100;i++)
+		for(int i=2;i<=100;i+=2)
 		{
-			if(i%2==0)
-				sum+=i;
+			sum+=i;
 		}
-		System.out.println("2+4...100의 합:"+sum);
-		*/
-		
-		/*
-		for(int i=5;i<=50;i+=5)
-			System.out.print(i+" ");
-		*/
-		
-		/*
-		for(char c='A';c<='Z';c+=2)
-			System.out.print(c+" ");
-		*/
-		
-		Scanner scan=new Scanner(System.in);
-		System.out.println("정수 입력:");
-		int num=scan.nextInt();	
-		
-		
-		
-		
-		
-		
-		
-		
-	
-		
+		System.out.println(sum);
+
 	}
 
 }

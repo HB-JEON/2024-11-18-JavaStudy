@@ -1,41 +1,5 @@
-import java.util.Scanner;
-//   C/C++ > include / C# > using / Python > from
-//    > 라이브러리, 사용자 정의 클래스(다른 폴더에 있는 경우)
 /*
- *  자바의 기본 형식
- *  packgae 위치 지정 > 한번만 사용 가능
- *  import ... > 여러번 사용 가능
- *   > 모든 프로그램은 main을 한개 이상 보유
- *  public class ClassName > ClassName.java
- *  {
- *  	================
- *  	멤버변수 > 전역변수
- *  	================
- *  	생성자() > 멤버변수 초기화
- *  	================
- *  	사용자 정의 메소드
- *  	================
- *  	main() > 
- *  	================
- *  }
- *  class ClsName1
- *  {
- *  }
- * 
- */
-import java.util.*;
-public class 선택문_반복문_문제 {
-	// static public
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.print("정수 입력:");
-	
-		
-
-  }
-}
-
-/*
+ *   
  *  선택문 / 반복문
  *   선택문
  *   switch(정수/문자/문자열)
@@ -65,144 +29,159 @@ public class 선택문_반복문_문제 {
  *    }
  *   다중 조건문을 간결하게 표현
  *   범위 지정이 많음 > 다중 조건문
- *   
- *  1. 100점 만점으로 성적을 입력 받아 90~100이면 A,80~89이면 B
- *   70~79이면 C, 60~69이면 D, 60점 이하면 F를 출력하라 (switch~case 사용)
- *    
- *    	Scanner scan=new Scanner(System.in);
-		System.out.print("점수 입력:");
-		int score=scan.nextInt();
-		
-		
-		switch(score/10)
-		{
-		case 9: case 10:
-			System.out.println("점은 A등급 입니다.");
-			break;
-		case 8: 
-			System.out.println("점은 B등급 입니다.");
-			break;
-		case 7:
-			System.out.println("점은 C등급 입니다.");
-			break;
-		case 6:
-			System.out.println("점은 D등급 입니다.");
-			break;
-		default:
-		System.out.println("점은 F등급 입니다.");
-		}
- *    
- *   
- *  2. 정수 2개와 연산자(+,-,*,/)를 입력 받아 사칙 연산하는 
- *   프로그램을 만들어라 (switch~case 사용)
- *     
- *     		Scanner scan=new Scanner(System.in);
-		System.out.println("첫번째 정수:");
-		int num1=scan.nextInt();
-		System.out.println("두번째 정수:");
-		int num2=scan.nextInt();
-		
-		System.out.print("연산자 입력(+,-,*,/):");
-		switch(scan.next())
-		{
-		case "+":
-			System.out.printf("%d + %d = %d\n"num1,num2,num1+num2);
-			break;
-		case "-":
-			System.out.printf("%d + %d = %d\n"num1,num2,num1+num2);
-			break;
-		case "*":
-			System.out.printf("%d + %d = %d\n"num1,num2,num1+num2);
-			break;
-		case "+":
-			if(num2==0)
-				System.out.println("0으로 나눌 수 없다.");
-			else
-				System.out.println(num1+"/"+num2+"="+(num1/(double)num2));
- *   
- *   
- *  3. 2+4+6+....100까지의 정수의 합을 구하고 출력하라 (for 사용)
- *     
- *     		int sum=0;
-		for(int i=2;i<=100;i+=2)
-		{
-			sum+=i;
-		}
-		System.out.println(sum);
-		
- *  
- *  4. 5,10,15,20,25,30,35,40,45,50을 출력하는 프로그램을 만들어라 (for 사용)
- *      
- *      for(int i=5;i<=50;i+=5)
- *      {
- *      	System.out.print(i+" ");
- *      }
- *      
- *      
- *  5. B,D,F,H,J,L,N을 출력하는 프로그램을 작성하라 (for 사용)
- *      
- *      for(char c='B';c<='N';c+=2)
- *      {
- *      	System.out.print(c+" ");
- *      }
- *      
- *      
- *  6. 한 개의 정수를 입력 받아 1부터 입력 받은 정수까지의 합을 출력하라    
- *      
- *      System.out.print("정수 입력:");
- *      int sum=0;
- *      int num=scan.nextInt();
- *      for(int i=1;i<=num;i++)
- *      {
- *      	sum+=i;
- *      }
- *      System.out.println("sum="+sum);
- *      
- *      
- *  7. 1부터 30까지의 정수에서 짝수만 한 줄에 3개씩 출력하라
- *      
- *      for(int i=1;i<=30;i++)
- *      {
- *      	if(i%2==0)
- *      	{
- *      		System.out.printf("%02d\t",i); // %2d(우측정렬) or %-2d(좌측정렬)
- *      		if(i%3==0) // 3개를 출력하고 다음 줄에 출력
- *      			System.out.println();
- *      	}
- *      }
- *      
- *      
- *  8. 1-2+3-4+5-6+7-8+9-10 계산 값을 for문을 이용하여 출력하라
- *      
- *      int sum=0;
- *      for(int i=1;i<=10;i++)
- *      {
- *      	if(i%2==0)
- *      		sum-=i;
- *      	else
- *      		sum+=i;
- *      }
- *      System.out.println("sum="+sum);
- *      
- *      
- *  9. 1~10 사이의 숫자 중 3의 배수를 제외하고 출력하라    
- *      
- *      for(int i=1;i<=10;i++)
- *      {
- *      	if(i%3!=0)
- *      		System.out.print(i+" ");
- *      }
- *      
- *      
- *  for - 반복 횟수 지정된 경우 주로 for문 사용
- *  	초기식 - 시작점 > 한번만 수행
- *  	조건식 - 종료점 > true : 반복문장 실행 / false : 종료
- *  	증감식 - 횟수지정 > i++, i+=2...
- *  
- *  		목록 출력 > 출력 형식 < 데이터값은 틀릴 수 있다
- *  		페이징 1~10 출력
- *  		쿠키 / 세션 읽기 등
- *  
- *  	for(초기식;조건식;증가식;)
- *  		반복실행 문장
+ * 
  */
+import java.util.Scanner;
+//C/C++ > include / C# > using / Python > from
+//> 라이브러리, 사용자 정의 클래스(다른 폴더에 있는 경우)
+public class 선택문_반복문_문제 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//	1. 100점 만점으로 성적을 입력 받아 90~100이면 A,80~89이면 B
+//		 70~79이면 C, 60~69이면 D, 60점 이하면 F를 출력하라 (switch~case 사용)
+		
+//		Scanner scan=new Scanner(System.in);
+//		System.out.print("점수 입력:");
+//		int score=scan.nextInt();
+//		
+//		
+//		switch(score/10)
+//		{
+//		case 9: case 10:
+//			System.out.println("점은 A등급 입니다.");
+//			break;
+//		case 8: 
+//			System.out.println("점은 B등급 입니다.");
+//			break;
+//		case 7:
+//			System.out.println("점은 C등급 입니다.");
+//			break;
+//		case 6:
+//			System.out.println("점은 D등급 입니다.");
+//			break;
+//		default:
+//		System.out.println("점은 F등급 입니다.");
+//		}
+		
+		
+//	2. 정수 2개와 연산자(+,-,*,/)를 입력 받아 사칙 연산하는 
+//		 프로그램을 만들어라 (switch~case 사용)
+		
+//		Scanner scan=new Scanner(System.in);
+//		System.out.println("첫번째 정수:");
+//		int num1=scan.nextInt();
+//		System.out.println("두번째 정수:");
+//		int num2=scan.nextInt();
+//		
+//		System.out.print("연산자 입력(+,-,*,/):");
+//		switch(scan.next())
+//		{
+//		case "+":
+//			System.out.printf("%d + %d = %d\n",num1,num2,num1+num2);
+//			break;
+//		case "-":
+//			System.out.printf("%d + %d = %d\n",num1,num2,num1-num2);
+//			break;
+//		case "*":
+//			System.out.printf("%d + %d = %d\n",num1,num2,num1*num2);
+//			break;
+//		case "/":
+//			if(num2==0)
+//				System.out.println("0으로 나눌 수 없다.");
+//			else
+//				System.out.println(num1+"/"+num2+"="+(num1/(double)num2));
+//		}
+		
+		
+//	3. 2+4+6+....100까지의 정수의 합을 구하고 출력하라 (for 사용)
+		
+//		int sum=0;
+//		for(int i=2;i<=100;i+=2)
+//		{
+//			sum+=i;
+//		}
+//		System.out.println(sum);
+		
+		
+//	4. 5,10,15,20,25,30,35,40,45,50을 출력하는 프로그램을 만들어라 (for 사용)
+		
+//		 for(int i=5;i<=50;i+=5)
+//		 {
+//			 System.out.print(i+" ");
+//		 }
+		
+		
+//	5. B,D,F,H,J,L,N을 출력하는 프로그램을 작성하라 (for 사용)
+		
+//		for(char c='B';c<='N';c+=2)
+//		{
+//			System.out.print(c+" ");
+//		}
+		
+		
+//	6. 한 개의 정수를 입력 받아 1부터 입력 받은 정수까지의 합을 출력하라
+		
+//		Scanner scan=new Scanner(System.in);
+//		System.out.print("정수 입력:");
+//		int sum=0;
+//		int num=scan.nextInt();
+//		for(int i=1;i<=num;i++)
+//		{
+//			sum+=i;
+//		}
+//		System.out.println("sum="+sum);
+		
+		
+//	7. 1부터 30까지의 정수에서 짝수만 한 줄에 3개씩 출력하라
+		
+//		for(int i=1;i<=30;i++)
+//		{
+//			  if(i%2==0)
+//			  {
+//				  System.out.printf("%02d\t",i); // %2d(우측정렬) or %-2d(좌측정렬)
+//				  if(i%3==0) // 3개를 출력하고 다음 줄에 출력
+//					  System.out.println();
+//			  }
+//		}
+		
+		
+//	8. 1-2+3-4+5-6+7-8+9-10 계산 값을 for문을 이용하여 출력하라
+		
+//		int sum=0;
+//		for(int i=1;i<=10;i++)
+//		{
+//			if(i%2==0)
+//				sum-=i;
+//			else
+//				sum+=i;
+//		}
+//		System.out.println("sum="+sum);
+		
+		
+//	9. 1~10 사이의 숫자 중 3의 배수를 제외하고 출력하라
+		
+        for(int i=1;i<=10;i++)
+        {
+        	if(i%3!=0)
+        		System.out.print(i+" ");
+        }
+	
+/*      
+*  for - 반복 횟수 지정된 경우 주로 for문 사용
+*  	초기식 - 시작점 > 한번만 수행
+*  	조건식 - 종료점 > true : 반복문장 실행 / false : 종료
+*  	증감식 - 횟수지정 > i++, i+=2...
+*  
+*  		목록 출력 > 출력 형식 < 데이터값은 틀릴 수 있다
+*  		페이징 1~10 출력
+*  		쿠키 / 세션 읽기 등
+*  
+*  	for(초기식;조건식;증가식;)
+*  		반복실행 문장
+*/
+        
+	}
+
+}
