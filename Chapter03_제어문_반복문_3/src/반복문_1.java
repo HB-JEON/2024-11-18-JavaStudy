@@ -56,6 +56,7 @@ public class 반복문_1 {
 		int i=1; // 선언됨
 		while(i<=10)
 		{
+			
 			System.out.print(i+" ");
 			i++;
 		}
