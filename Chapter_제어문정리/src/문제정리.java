@@ -43,7 +43,7 @@
  *       // 자동완성기(서제스트)
  * 
  */
-public class 문제정리_1 {
+public class 문제정리 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
