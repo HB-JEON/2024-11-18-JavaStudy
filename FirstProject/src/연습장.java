@@ -5,7 +5,7 @@ public class 연습장 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Scanner scan=new Scanner(System.in);
+//		Scanner scan=new Scanner(System.in);
 //		System.out.print("정수입력:");
 //		int score=scan.nextInt();
 //		
@@ -49,14 +49,27 @@ public class 연습장 {
 //			else
 //				System.out.printf("%d / %d = %d ",num1,num2,num1/num2);
 //		}
+	
+//		Scanner scan=new Scanner(System.in);
+//		while(true)
+//		{
+//			System.out.print("1이상의 정수를 입력 : ");
+//			int num=scan.nextInt();
+//			if(num<1) 
+//			{
+//				System.out.print("1이상의 정수를 입력 해주세요.\n");
+//			}
+//			else
+//			{
+//				for(int i=1;i<num;i++)
+//				{
+//					System.out.print(i+" ");
+//				}
+//				break;
+//			}
+//		}
+	
 		
-		int sum=0;
-		for(int i=2;i<=100;i+=2)
-		{
-			sum+=i;
-		}
-		System.out.println(sum);
-
 	}
 
 }
