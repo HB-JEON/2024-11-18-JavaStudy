@@ -71,7 +71,7 @@
 import java.util.Scanner; // 이미 만들어져 있는 클래스를 읽어오는 과정
 // > 이미 만들어진 클래스 - 라이브러리
 // 클래스를 가지고 올 때 import
-public class 제어문_조건문1 {
+public class 제어문_조건문_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
