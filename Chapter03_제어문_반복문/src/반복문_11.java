@@ -18,7 +18,7 @@ public class 반복문_11 {
 			System.out.print(i+" ");
 		
 		System.out.println();
-		
+		 
 		// 1~100 > 5의 배수를 전부 출력
 		for(int i=5;i<=100;i+=5)
 			System.out.print(i+" ");
