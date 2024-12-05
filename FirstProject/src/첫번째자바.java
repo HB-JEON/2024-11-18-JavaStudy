@@ -68,6 +68,7 @@
  	  수업 / 금
  	  일주일간의 강의 정리
  */
+
 public class 첫번째자바 {
 
 	public static void main(String[] args) {

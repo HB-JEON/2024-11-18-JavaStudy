@@ -1,50 +1,46 @@
 import java.util.Scanner;
 public class 메소드_문제 {
 	
-//	static void num()
-//	{
-//		for(int i=1;i<=10;i++)
-//		{
-//			System.out.println(i+" ");
-//		}
-//	}
+	static void print1()
+	{
+		for(int i=1;i<=10;i++)
+			System.out.print(i+" ");
+	}
 	
-//	static void sum() 
-//	{
-//		int sum=0;
-//		{
-//			for(int i=1;i<=10;i++)
-//			{
-//				sum+=i;
-//			}
-//		System.out.println(sum+" ");
-//		}
-//	}
+	static int print2()
+	{
+		int sum=0;
+		for(int i=1;i<=10;i++)
+		{
+			sum+=i;
+		}
+		return sum;
+	}
 	
-//	static String div(int a, int b)
-//	{
-//		if(b==0)
-//		{
-//			System.out.println("0으로 나눌 수 없습니다.");
-//		}
-//		else
-//		{
-//			System.out.println();
-//		}
-//			
-//	}
+	static int print3(int n)
+	{
+		int sum=0;
+		for(int i=1;i<=n;i++)
+		{
+			sum+=i;
+		}
+		return sum;
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-//		num();
-//		sum();
-		
-//		return;
-		
 //		1. 1~10까지 출력하는 메소드를 구현하시오
 //		2. 1~10까지 합을 구하는 메소드를 구현하시오
 //		3. 1~n까지 합을 구하는 메소드를 구현하시오
+		
+		print1();
+		print2();
+		int hop=print2();
+		System.out.println("\n1~10의 합:"+hop);
+		hop=print3(100);
+		System.out.println("1~n의 합:"+hop);
+		
 //		4. 두 정수의 나눗셈 결과를 구하는 메소드를 구현하시오(실수)
 //		5. 문자열의 소문자를 대문자로 바꾸는 메소드를 구현하시오
 //		6. 문자열을 입력받아서 좌우 대칭인지 확인하는 메소드를 구현하시오
