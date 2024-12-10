@@ -4,7 +4,7 @@ public class 문자열배열_오답 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		 
 //		1. (1차배열)1번 학생 100점 2번 학생 90점 3번학생 85점이다.
 //		 점수를 score 배열 변수에 저장하고 1) 아래와 같이 출력하시오.
 //		1번 학생 : 100점  
