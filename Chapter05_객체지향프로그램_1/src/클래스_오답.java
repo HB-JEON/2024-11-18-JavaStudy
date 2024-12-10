@@ -21,18 +21,15 @@ class Recipe3
 
 class FoodCommons
 {
-	String poster;
+	String[] subPoster=new String[7];
 	String name, phone,address,type;
 	double score;
 }
-class FoodHouse
+class FoodHouse extends FoodCommons
 {
-	FoodCommons fc=new FoodCommons();
 	String poster;
 	String theme;
 	int like;
-	
-	String[] subPoster=new String[7]; // 배열로 잡기
 }
 
 class Member
@@ -43,9 +40,9 @@ class Member
 
 class FoodHouse2
 {
-	String parking;
+	FoodCommons fc=new FoodCommons();
+	String parking,time;
 	String[] menu;
-	double score;
 }
 
 public class 클래스_오답 {
