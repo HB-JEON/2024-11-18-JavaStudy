@@ -11,7 +11,7 @@ public class 자바_제어문_while오답 {
 //		int dan=scan.nextInt();
 //		int i=1;
 //		while(i<=9)
-//		{
+//		{ 
 //			System.out.println(dan+"*"+i+"="+dan*i);
 //			i++;
 //		}
