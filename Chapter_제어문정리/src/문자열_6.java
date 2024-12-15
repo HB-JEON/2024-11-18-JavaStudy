@@ -13,7 +13,7 @@
  *  trim() - 공백제거               
  *    
  *  >>>>>> JavaScript와 동일
- * 
+ *  
  */
 public class 문자열_6 {
 

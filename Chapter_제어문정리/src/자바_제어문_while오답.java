@@ -1,6 +1,6 @@
 import java.util.*;
 public class 자바_제어문_while오답 {
-
+ 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scan=new Scanner(System.in);

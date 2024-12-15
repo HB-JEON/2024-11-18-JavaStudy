@@ -21,7 +21,7 @@ public class 문자열_4 {
 		System.out.println("첫번째 문자:"+data.charAt(0));
 		System.out.println("마지막 문자:"+data.charAt(data.length()-1));
 		*/
-		
+		 
 		Scanner scan=new Scanner(System.in);
 		String data="";
 		while(true)

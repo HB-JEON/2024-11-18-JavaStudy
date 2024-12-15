@@ -34,7 +34,7 @@ public class 문자열_1 {
 		
 		final String ID="admin";
 		final String PWD="1234"; // 고정 > 상수
-		
+		 
 		Scanner scan=new Scanner(System.in); // equals > 같으면 true / 틀리면 false
 		while(true) // ID/PWD 무한루프
 		{

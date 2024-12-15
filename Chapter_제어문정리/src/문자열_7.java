@@ -31,7 +31,7 @@ public class 문자열_7 extends JFrame {
 		add("North",tf);
 		setSize(600, 480);
 		setVisible(true);
-		
+		 
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method st

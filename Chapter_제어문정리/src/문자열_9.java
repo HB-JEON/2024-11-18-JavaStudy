@@ -12,7 +12,7 @@ public class 문자열_9 {
 		// 영문만 출력
 		System.out.println(data.replaceAll("[^0-9]", ""));
 		// 숫자만 출력
-		
+	 	
 	}
 
 }

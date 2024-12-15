@@ -10,7 +10,7 @@ import java.util.Scanner;
  *  
  *  replace(문자,문자)
  *          |old |new
- *          
+ *           
  *  String data="Hello Java"
  *  data.replace('a','b') > Hello Jbvb        
  *          

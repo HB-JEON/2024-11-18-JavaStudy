@@ -17,7 +17,7 @@ public class 문자열_2 {
 		String fd=scan.next();
 		int k=1;
 		for(int i=1;i<=4;i++)
-		{
+		{ 
 			Document doc=Jsoup.connect("https://www.genie.co.kr/chart/top200?ditc=D&ymd=20241127&hh=11&rtm=Y&pg="+i).get();
 			// 곡명 읽기
 			Elements title=doc.select("table.list-wrap a.title");

@@ -12,7 +12,7 @@ public class 문자열_3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		 
 		Scanner scan=new Scanner(System.in);
 		// BufferedReader > 예외처리
 		System.out.print("문자열 입력:");
