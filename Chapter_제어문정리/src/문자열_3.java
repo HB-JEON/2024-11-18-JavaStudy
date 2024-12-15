@@ -7,7 +7,7 @@
  */
 import java.util.Scanner;
 // 사용자가 입력한 문자의 갯수 확인(공백 포함)
-// 
+//  
 public class 문자열_3 {
 
 	public static void main(String[] args) {
