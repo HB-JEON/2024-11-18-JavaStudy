@@ -106,24 +106,24 @@ public class 예외처리_1 {
  *                                              SELECT                                ArrayIndexOutOfBoundsException - 배열범위 초과
  *                                              ------ JOIN / SUBQUERY                 int arr=new int[2]; //0,1 
  *                                                     FUNCTION                        int arr[2]=100; => 오류 발생
- *                                                     PROCEDURE                      NullPointerExcetion
+ *                                                     PROCEDURE                     NullPointerExcetion
  *                                                     TRIGGER                         A a;
- *                                              입고 => 재고                            a.display()
- *                                              출고 => 재고
- *                                           SQL                                   ArithmeticException / ClassCastException
- *                                            DQL - SELECT(검색)                       NumberFormatException - 문자열을 정수형으로 변경
- *                                            DML - INSERT / UPDATE / DELETE
- *                                            DCL - GRANT / REVOKE
- *                                            TCL - COMMIT / ROLLBACK                        => catch 여러개인 경우
- *                                            DDL - CREATE / ALTER / DROP                       계층 순서로 적용
- *                                         ClassNotFoundxeption
- *                                          Class.forName("패키지.클래스명")                      catch(NumberFormatException)
- *                                           => 리플렉션 => 클래스 정보                            catch(IOException e)
- *                                         InterrutedExeption - 충돌방지                         catch(Exception e) => 기타
- *                                           => 쓰레드                                         => 위로 올라갈수록 예외처리범위가 커진다
- *                                         MalformedURLxeption                                   -------------------------------
- *                                           => URL                                              catch 는 반드시 작은 순위 => 큰 순위로 설정
- *                                                                                            => 예외처리의 가장 큰 클래스는 Exception
+ *                                              입고 => 재고                            a.display() => 객체 주소가 지정되지 않은 경우
+ *                                              출고 => 재고                          ArithmeticException - 0으로 나누는 경우               
+ *                                           SQL                                      ClassCastException
+ *                                            DQL - SELECT(검색)                      NumberFormatException - 문자열을 정수형으로 변경
+ *                                            DML - INSERT / UPDATE / DELETE          
+ *                                            DCL - GRANT / REVOKE                          => catch 여러개인 경우
+ *                                            TCL - COMMIT / ROLLBACK                          계층 순서로 적용
+ *                                            DDL - CREATE / ALTER / DROP                       
+ *                                         ClassNotFoundxeption                             catch(NumberFormatException)
+ *                                          Class.forName("패키지.클래스명")                  catch(IOException e)
+ *                                           => 리플렉션 => 클래스 정보                       catch(Exception e) => 기타
+ *                                         InterrutedExeption - 충돌방지                     => 위로 올라갈수록 예외처리범위가 커진다
+ *                                           => 쓰레드                                          ---------------------------------
+ *                                         MalformedURLxeption                              catch 는 반드시 작은 순위 => 큰 순위로 설정
+ *                                           => URL                                         => 예외처리의 가장 큰 클래스는 Exception
+ *                                                                                            
  *                                        => java.io / java.sql / java.net
  *                                          CheckException => 반드시 예외처리를 하고 사용
  *                                          
