@@ -19,36 +19,11 @@ public class 자바제어문_단일조건문_2 {
 		System.out.print("연산자 입력: +(43),-(45),*(42),/(47):");
 		char op=(char)scan.nextInt();
 		
-		/*
 		System.out.print(num1);
-		System.out.print(num2);
 		System.out.print(op);
-		*/
-		
-		if(op=='+')
-		{
-			System.out.printf("%d + %d = %d\n",num1,num2,num1+num2);
-		}
-		if(op=='-')
-		{
-			System.out.printf("%d - %d = %d\n",num1,num2,num1-num2);
-			//	JOptionPen.showMessageDialog(null,num1+"-"+num2+"="+(num1-num2));
-		}
-		if(op=='*')
-		{
-			System.out.printf("%d * %d = %d\n",num1,num2,num1*num2);
-		}
-		if(op=='/')
-		{
-			// 중첩 조건문 > 이중 if
-			if(num2==0)
-				System.out.println("0으로 나눌 수 없다.");
-			if(num2!=0)
+		System.out.print(num2);
 				
-			System.out.printf("%d / %d = %d\n",num1,num2,num1/num2);
-		}
-		
-		
+
 	}
-	
+
 }

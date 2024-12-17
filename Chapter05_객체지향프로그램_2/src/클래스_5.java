@@ -19,7 +19,7 @@
  *      | 구현
  *        int[] arr=new int[5];
  *      > int[] arr={1,2,3,4,5};
- *  
+ * 
  */
 
 class Movie

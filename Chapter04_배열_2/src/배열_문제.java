@@ -11,15 +11,9 @@ public class 배열_문제 {
 //		
 //		for(int i=0;i<arr.length;i++)
 //		{
-//			arr[i]=(int)(Math.random()*100)+1;
+//				
 //		}
-//		System.out.println(Arrays.toString(arr));
-//		for(int i:arr)
-//		{
-//			if(i%3==0)
-//				System.out.println(i);
-//		}
-//		
+		
 		// 5. 정수를 10개 저장하는 배열을 만들고 1에서 10까지 범위의 정수를 랜덤하게 생성하여 배열에 저장하라. 
 		//    그리고 배열에 든 숫자들과 평균을 출력하라. 
 		
@@ -27,16 +21,21 @@ public class 배열_문제 {
 //		
 //		for(int i=0;i<arr.length;i++)
 //		{
-//			arr[i]=(int)(Math.random()*10)+1;
+//			arr[i]=(int)(Math.random()*100)+1;
 //		}
-//		System.out.println(Arrays.toString(arr));
-//		int sum=0;
+//		System.out.println("10개의 정수:");
 //		for(int i:arr)
+//		{
+//			System.out.print(i+" ");
+//		}
+//		double avg=0.0;
+//		int sum=0;
+//		for(int i : arr)
 //		{
 //			sum+=i;
 //		}
-//		System.out.printf("%.2f",sum/10.0);
-
+//		String result=String.format("\n%.2f", sum/10.0);
+//		System.out.println(result);
 		
 //		6. 다음 배열에서 최대값,최소값을 출력하는 프로그램을 작성하시오
 //		int[] num = { 94, 85, 95, 88, 90 };
@@ -44,34 +43,16 @@ public class 배열_문제 {
 //		int[] num={94,85,95,88,90};
 //		int max=num[0];
 //		int min=num[0];
+//		System.out.println(Arrays.toString(num));
 //		
 //		for(int i:num)
 //		{
-//			if(i>max)
+//			if(max<i)
 //				max=i;
-//			if(i<min)
+//			if(min>i)
 //				min=i;
+//			System.out.println(" "+max);
 //		}
-//		System.out.println(max);
-//		System.out.println(min);
-		
-//		8. arr 배열 중에서 인덱스가 1인 곳의 값을 출력해보자.
-//		   int[] arr={10,20,30,50,3,60,-3};
-		
-		 int[] arr={10,20,30,50,3,60,-3};
-		 
-		 System.out.println(arr[1]);
-		 
-//		9. arr 배열 중에서 값이 60인 곳의 인덱스를 출력해보자. 
-		 
-		 for(int i=0;i<arr.length;i++)
-		 {
-			 if(arr[i]==60)
-			 {
-				 System.out.println();
-			 }
-		 }
-
 		
 	}
 

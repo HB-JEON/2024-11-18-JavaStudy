@@ -5,7 +5,7 @@ class Myboard
 {
 	@RequestMapping("write")
 	public void write()
-	{
+	{  
 		System.out.println("글쓰기 처리");
 	}
 	@RequestMapping("list")

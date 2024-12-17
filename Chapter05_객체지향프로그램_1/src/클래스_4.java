@@ -31,6 +31,7 @@ class Recipe
 	int rno; // 구분자
 	String title;
 	String chef;
+	String poster;
 }
 
 class RecipeSite
@@ -44,8 +45,8 @@ class RecipeSite
 		{
 			int j=0;
 			Document doc=Jsoup.connect("https://www.10000recipe.com/recipe/list.html").get();
-			Elements title=doc.select("ul div.common_sp_caption_tit");
-			Elements chef=doc.select("ul div.common_sp_caption_rv_name");
+			Elements title=doc.select("common_sp_list_ul div.common_sp_caption_tit");
+			Elements chef=doc.select("common_sp_list_ul div.common_sp_caption_rv_name");
 			for(int i=0;i<title.size();i++)
 			{
 				recipes[j]=new Recipe();
@@ -66,12 +67,12 @@ public class 클래스_4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		 RecipeSite rs=new RecipeSite();
-	        System.out.println("====== 레시피 목록 =========");
-	        for(Recipe r:rs.recipes)
-	        {
-	        	System.out.println(r.title);
-	        }
+		RecipeSite rs=new RecipeSite();
+		System.out.println("===== 레시피 목록 ======");
+		for(Recipe r:rs.recipes)
+		{
+			System.out.println(r.title);
+		}
 		
 	}
 
