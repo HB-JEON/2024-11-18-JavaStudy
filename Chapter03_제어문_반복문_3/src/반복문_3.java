@@ -1,5 +1,7 @@
 /*
+ * 
  *  가위 바위 보 게임을 10번 수행 > 5승 1무 4패
+ * 
  */
 import java.util.Scanner;
 public class 반복문_3 {

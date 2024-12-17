@@ -22,7 +22,7 @@ public class 오라클연동 {
 		ResultSet rs=ps.executeQuery();
 		// rs에 실행된 데이터가 들어가 있다
 		while(rs.next()) // 데이터가 시작 ~ 끝까지 읽어 온다
-		{
+		{    
 			System.out.print(
 					rs.getInt(1)+" "
 					+rs.getString(2)+" "

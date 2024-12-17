@@ -117,16 +117,9 @@
 		
 		System.out.printf("%d * %d + %d = %d", a,b,c,(a*b+c));
  * 
- *  11. 두 개의 정수를 입력 받아서 첫째 수를 둘째 수로 나눈
- *       나머지를 출력하는 프로그램을 작성해 보자.
  * 
- *      Scanner scan=new Scanner(System.in);
- *      System.out.print("두개 정수 입력(10 20)");
- *      int a=scan.nextInt();
- *      int b=scan.nextInt();
- *      
- *      System.out.printf("%d %% %d = %d",a,b,a%b);
- *      System.out.println();
+ * 
+ * 
  * 
  * 
  */
@@ -138,20 +131,12 @@ public class 연산자_문제 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		/*
 		Scanner scan=new Scanner(System.in);
 		System.out.print("두개 정수 입력(10 20)");
 		int a=scan.nextInt();
 		int b=scan.nextInt();
 		
-		System.out.printf("%d %% %d = %d",a,b,a%b);
-		System.out.println();
-		*/
-		
-		
-		 
-		
-				
+		// System.out.printf("%d %% %d = %d", a,b,c,(a*b+c));
 		
 		
 	}

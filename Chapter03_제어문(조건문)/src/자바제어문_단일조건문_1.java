@@ -38,7 +38,7 @@ public class 자바제어문_단일조건문_1 {
 			System.out.println(num+"는(은) 3의 배수 입니다.");
 		}
 		
-		if(num%3!=0)
+		if(num%2!=0)
 		{
 			System.out.println(num+"는(은) 3의 배수가 아닙니다.");
 		}
