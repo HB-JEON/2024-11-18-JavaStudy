@@ -1,4 +1,4 @@
-package com.sitst.exception;
+package com.sist.exception;
 import java.util.Scanner;
 // 268 page => 형식
 // 270 page => 다중 catch

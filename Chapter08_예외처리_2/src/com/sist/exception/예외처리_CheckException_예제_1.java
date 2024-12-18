@@ -1,4 +1,4 @@
-package com.sitst.exception;
+package com.sist.exception;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.sitst.exception;
+package com.sist.exception;
 import java.net.URL;
 import java.sql.*;
 public class 예외처리_finally사용법_2 {

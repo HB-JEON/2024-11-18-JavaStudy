@@ -1,4 +1,4 @@
-package com.sitst.exception;
+package com.sist.exception;
 // try~catch~finally
 // finally 생략 가능
 // 사용처 => 파일 닫기, 오라클 연결 해제, 서버 연결 해제
