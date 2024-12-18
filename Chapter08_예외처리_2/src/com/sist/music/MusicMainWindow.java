@@ -55,7 +55,7 @@ import java.awt.event.ActionListener;
  *         역할       관련된 클래스를 모아서 한 개의 객체명으로 관리
  *        ---------------------------------------------------
  *         같은 클래스 여러개 (배열) => ArrayList
- *         다른 클래스 여러개 (인터페이스) =>
+ *         다른 클래스 여러개 (인터페이스)
  */
 public class MusicMainWindow extends JFrame 
 implements ActionListener

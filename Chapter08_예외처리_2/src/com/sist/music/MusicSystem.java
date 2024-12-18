@@ -8,7 +8,7 @@ import org.jsoup.select.Elements;
  *  1. 파일 => IO
  *  2. URL => URL 주소
  *  3. SQL => 네트워크
- *    ---------------- CheckException
+ *    ---------------  CheckException
  *                     --------------
  *                     컴파일 시 예외처리 확인
  */
