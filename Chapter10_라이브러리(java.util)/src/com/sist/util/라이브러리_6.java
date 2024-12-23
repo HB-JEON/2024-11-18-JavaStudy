@@ -59,13 +59,13 @@ public class 라이브러리_6 {
 				{
 					System.out.print("\t");
 				}
-				System.out.printf("%2d\t",i);
-				week2++;
-				if(week2>6) // 일요일이면
-				{
-					week2=0;
-					System.out.println();
-				}
+			}
+			System.out.printf("%2d\t",i);
+			week2++;
+			if(week2>6) // 일요일이면
+			{
+				week2=0;
+				System.out.println();
 			}
 		}
 	}
