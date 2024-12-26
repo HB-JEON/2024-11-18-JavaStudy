@@ -12,32 +12,32 @@ public class 컬렉션_7_Set_2 {
 		set.add("red");
 		set.add("blue");
 		set.add("green");
-		set.add("Yellow");
+		set.add("yellow");
 		set.add("pink");
 		set.add("red");
 		set.add("blue");
 		set.add("green");
-		set.add("Yellow");
+		set.add("yellow");
 		set.add("pink");
 		set.add("red");
 		set.add("blue");
 		set.add("green");
-		set.add("Yellow");
+		set.add("yellow");
 		set.add("pink");
 		set.add("red");
 		set.add("blue");
 		set.add("green");
-		set.add("Yellow");
+		set.add("yellow");
 		set.add("pink");
 		set.add("red");
 		set.add("blue");
 		set.add("green");
-		set.add("Yellow");
+		set.add("yellow");
 		set.add("pink");
 		set.add("red");
 		set.add("blue");
 		set.add("green");
-		set.add("Yellow");
+		set.add("yellow");
 		set.add("pink");
 		// 실제 저장은 5개만 저장됨
 		System.out.println("저장 개수 : "+set.size());
@@ -60,9 +60,9 @@ public class 컬렉션_7_Set_2 {
 		{
 			System.out.println(color);
 		}
-//        System.out.println("===== 전체 삭제 =====");
-//        set.clear();
-//        System.out.println("저장 갯수 : "+set.size());
+        System.out.println("===== 전체 삭제 =====");
+        set.clear();
+        System.out.println("저장 갯수 : "+set.size());
 		// 저장된 데이터 출력
         for(String color:set)
         {
