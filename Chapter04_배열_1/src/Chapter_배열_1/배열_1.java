@@ -1,3 +1,5 @@
+package Chapter_배열_1;
+
 /*
  *  1. 데이터를 관리하기 쉽게 데이터 묶어서 사용
  *    같은 데이터형을 모아서 관리 > 배열
@@ -46,7 +48,6 @@
  *  
  */
 import java.util.Scanner;
-package chapter_배열_1;
 
 public class 배열_1 {
 

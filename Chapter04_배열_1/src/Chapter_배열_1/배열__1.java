@@ -1,4 +1,4 @@
-package chapter_배열_1;
+package Chapter_배열_1;
 
 public class 배열__1 {
 
