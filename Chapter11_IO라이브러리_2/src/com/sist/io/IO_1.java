@@ -95,7 +95,7 @@ public class IO_1 {
         try
         {
         	// 파일 읽기 => 358page
-        	fis=new FileReader("C:\\javaDev\\javaStudy\\Chapter11_IO라이브러리_2\\src\\com\\sist\\io\\IO_1.java");
+        	fis=new FileReader("C:\\Users\\sist-106\\git\\2024-11-18-JavaStudy\\Chapter11_IO라이브러리_2\\src\\com\\sist\\io\\IO_1.java");
         	// 숫자 / 알파벳 => 정상 수행 
         	int i=0; // read() => int => char로 변환 
         	// 'A' => 65

@@ -41,23 +41,46 @@ public class IO_4 {
         			}
         			String[] sawons=data.split("\n");
         			
-        			for(String sa:sawons)
-        			{
-        				if(sa==null || sa.equals(""))
-            			{
-            				System.out.println("등록된 사원이 없습니다");
-            				break; 
-            			}
-        				String[] sawon=sa.split("\\|");
-        				System.out.println("사번:"+sawon[0]);
-        				System.out.println("이름:"+sawon[1]);
-        				System.out.println("부서:"+sawon[2]);
-        				System.out.println("직위:"+sawon[3]);
-        				System.out.println("근무지:"+sawon[4]);
-        				System.out.println("연봉:"+sawon[5]);
-        				System.out.println("==============");
+//        			for(String sa:sawons)
+//        			{
+//        				if(sa==null || sa.equals(""))
+//            			{
+//            				System.out.println("등록된 사원이 없습니다");
+//            				break; 
+//            			}
+//        				String[] sawon=sa.split("\\|");
+//        				System.out.println("사번:"+sawon[0]);
+//        				System.out.println("이름:"+sawon[1]);
+//        				System.out.println("부서:"+sawon[2]);
+//        				System.out.println("직위:"+sawon[3]);
+//        				System.out.println("근무지:"+sawon[4]);
+//        				System.out.println("연봉:"+sawon[5]);
+//        				System.out.println("==============");
+//        			}
+//        			fr.close();
+        			for (String sa : sawons) {
+        			    if (sa == null || sa.trim().isEmpty()) {
+        			        System.out.println("등록된 사원이 없습니다");
+        			        break; 
+        			    }
+
+        			    String[] sawon = sa.split("\\|");
+
+        			    // Check if the array has the expected number of elements (6)
+        			    if (sawon.length == 6) {
+        			        System.out.println("사번:" + sawon[0]);
+        			        System.out.println("이름:" + sawon[1]);
+        			        System.out.println("부서:" + sawon[2]);
+        			        System.out.println("직위:" + sawon[3]);
+        			        System.out.println("근무지:" + sawon[4]);
+        			        System.out.println("연봉:" + sawon[5]);
+        			        System.out.println("==============");
+        			    } else {
+        			        System.out.println("잘못된 데이터 형식: " + sa);
+        			    }
+        			    
         			}
-        			fr.close();
+        			 fr.close();
         		}
         		else if(menu==2)
         		{

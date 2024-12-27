@@ -14,7 +14,7 @@ public class IO_3 {
 			fw=new FileWriter("c:\\java_data\\sawon.txt",true);
 			// true => append모드 => 이어서 저장이 가능 
 			// sawon.txt파일이 없는 경우에는 자동으로 생성 
-			fw.write("3|박문수|영업부|부산|3000\r\n");
+			fw.write("3|박문수|영업부|사원|부산|3000\r\n");
 			System.out.println("등록 완료");
 		}catch(Exception ex)
 		{
