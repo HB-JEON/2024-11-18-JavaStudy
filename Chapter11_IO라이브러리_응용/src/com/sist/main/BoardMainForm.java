@@ -9,13 +9,14 @@ import java.awt.*;
 import java.awt.event.*;
 import java.text.SimpleDateFormat;
 public class BoardMainForm extends JFrame
-implements ActionListener
+implements ActionListener, MouseListener
 {
     CardLayout card=new CardLayout();
     BoardList bList=new BoardList();
     BoardDetail bDetail=new BoardDetail();
     BoardInsert bInsert=new BoardInsert();
     BoardUpdate bUpdate=new BoardUpdate();
+    BoardDelete bDelete=new BoardDelete();
     // 게시판 관리자 
     BoardManager bm=new BoardManager();
     // 변수 설정 
@@ -29,6 +30,7 @@ implements ActionListener
     	add("DETAIL",bDetail);
     	add("INSERT",bInsert);
     	add("UPDATE",bUpdate);
+    	add("DELETE", bDelete);
     	
     	setTitle("윈도우 게시판 ver 1.0");
     	listPrint();
@@ -39,6 +41,23 @@ implements ActionListener
     	bList.inBtn.addActionListener(this);// 글쓰기 이동버튼
     	bInsert.b1.addActionListener(this);// 글쓰기
     	bInsert.b2.addActionListener(this);// 취소 
+    	
+    	//이전
+    	bList.prevBtn.addActionListener(this);
+    	//다음
+    	bList.nextBtn.addActionListener(this);
+    	// table
+    	bList.table.addMouseListener(this);
+    	// 목록
+    	bDetail.b3.addActionListener(this);
+    	// 수정
+    	bDetail.b1.addActionListener(this);
+    	// 삭제
+    	bDetail.b2.addActionListener(this);
+    	
+    	// 실제 삭제
+    	bDelete.b1.addActionListener(this); // 삭제 
+    	bDelete.b2.addActionListener(this); // 취소
     }
     public void listPrint()
     {
@@ -154,6 +173,129 @@ implements ActionListener
 			card.show(getContentPane(), "LIST");
 			listPrint();
 		}
+		else if(e.getSource()==bList.prevBtn) // 이전 버튼
+		{
+			if(curpage>1)
+			{
+				curpage--;
+				listPrint();
+			}
+		}
+		else if(e.getSource()==bList.nextBtn) // 다음 버튼
+		{
+			if(curpage<totalpage)
+			{
+				curpage++;
+				listPrint();
+			}
+		}
+		// 웹 => 반드시 현재 페이지로 전송
+		else if(e.getSource()==bDetail.b3) // 상세보기 => 목록
+		{
+			card.show(getContentPane(), "LIST");
+			listPrint();
+		}
+		else if(e.getSource()==bDelete.b2)
+		{
+			card.show(getContentPane(), "DETAIL");
+			// 화면 변경
+		}
+		else if(e.getSource()==bDelete.b1)
+		{
+			String no=bDetail.no.getText();
+			BoardVO vo=bm.boardUpdateData(Integer.parseInt(no));
+					card.show(getContentPane(), "UPDATE");
+			bUpdate.nameTf.setText(vo.getName());
+			bUpdate.subTf.setText(vo.getSubject());
+			bUpdate.ta.setText(vo.getContent());
+		}
+		else if(e.getSource()==bDelete.b2)
+		{
+			card.show(getContentPane(), "DETAIL");
+		}
+		else if(e.getSource()==bDelete.b1)
+		{
+			String pwd=String.valueOf(bDelete.pf.getPassword());
+			if(pwd.length()<1)
+			{
+				bDelete.pf.requestFocus();
+				return;
+			}
+			String no=bDetail.no.getText();
+			boolean bCheck=bm.boardDelete(Integer.parseInt(no), pwd);
+			if(bCheck==false)
+			{
+				JOptionPane.showMessageDialog(this, "비밀번호가 틀립니다.");
+				bDelete.pf.setText("");
+				bDelete.pf.requestFocus();
+			}
+			else
+			{
+				card.show(getContentPane(), "LIST");
+				listPrint();
+			}
+		}
+		// 수정 / 삭제 => 본인 여부 확인 => 비밀번호
+		// boolean 비밀번호 체크
+		/*
+		 *   1. 목록 => 장바구니 => 목록
+		 *              삭제 => 목록
+		 *   2. 상세보기
+		 *         수정 => 상세보기
+		 *   3. 취소 => 이전 화면 이동
+		 *              history.back()
+		 */
 	}
-
+	// onMouseDown
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	// onMouseUp
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==bList.table)
+		{
+			if(e.getClickCount()==2) // 더블 클릭
+			{
+				int row=bList.table.getSelectedRow();
+				String no=bList.model.getValueAt(row, 0).toString();
+//				System.out.println(no);
+				BoardVO vo=bm.boardDetailData(Integer.parseInt(no));
+				card.show(getContentPane(), "DETAIL");
+				
+				// 출력 => bDetail
+				bDetail.no.setText(String.valueOf(vo.getNo()));
+				bDetail.name.setText(vo.getName());
+				bDetail.sub.setText(vo.getSubject());
+				bDetail.ta.setText(vo.getContent());
+				bDetail.hit.setText(String.valueOf(vo.getHit()));
+				bDetail.day.setText(new SimpleDateFormat("yyyy-MM-dd").format(vo.getRegdate()));
+				// 1. 웹 / 윈도우 => 거의 대부분이 String
+				//    정수 / 실수 변환 => String.valueOf()
+				//    ---------- Integer.parseInt() Double.parseDouble()
+				// 날짜 => SimpleDateFormat
+				// 정수 => DecimalFormat
+			}
+		}
+	}
+	// onMouseOver
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	// onMouseOut
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 }

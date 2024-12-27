@@ -52,12 +52,110 @@ public class BoardManager {
 		boardSave();// 파일 변경
 	}
 	// 3. 상세보기 
-	// 4. 수정 / 삭제 => Update / Delete 
+	public BoardVO boardDetailData(int no)
+	{
+		// 조회수 증가
+		BoardVO vo=new BoardVO();
+		for(BoardVO dvo:boardList)
+		{
+			if(dvo.getNo()==no) 
+			{
+				dvo.setHit(dvo.getHit()+1);
+				boardSave();
+				break;
+			}
+		}
+		boardGetData();
+		// 상세보기 데이터 찾기
+		for(BoardVO dvo:boardList)
+		{
+			if(dvo.getNo()==no)
+			{
+				vo=dvo;
+				break;
+			}
+		}
+		return vo;
+	}
+	// 4. 수정 / 삭제 => Update / Delete
+	public BoardVO boardUpdateData(int no)
+	{
+		BoardVO vo=new BoardVO();
+		for(BoardVO dvo:boardList)
+		{
+			if(dvo.getNo()==no)
+			{
+				vo=dvo;
+				break;
+			}
+		}
+				return vo;
+	}
+	public boolean boardUpdata(BoardVO vo)
+	{
+		boolean bCheck=false;
+		int index=0;
+		for(int i=0;i<boardList.size();i++)
+		{
+			BoardVO dvo=boardList.get(index);
+			if(vo.getNo()==dvo.getNo());
+			{
+				index=i;
+				break;
+			}
+		}
+		BoardVO dvo=boardList.get(index);
+		if(dvo.getPwd().equals(vo.getPwd()))
+		{
+			bCheck=true;
+			boardList.set(index, vo); // 수정 => List
+			boardSave(); // 파일 변경
+		}
+		else
+		{
+			bCheck=false;
+		}
+		return bCheck;
+	}
+	public boolean boardDelete(int no, String pwd)
+	{
+		boolean bCheck=false;
+		
+		for(BoardVO vo:boardList)
+		{
+			if(vo.getNo()==no)
+			{
+				if(vo.getPwd().equals(pwd))
+				{
+					if(!vo.getPwd().equals(pwd))
+						bCheck=false;
+					return bCheck;
+				}
+			}
+		}
+		
+		int index=0;
+		// remove(int index)
+		for(int i=0;i<boardList.size();i++)
+		{
+			BoardVO vo=boardList.get(i);
+			if(vo.getNo()==no)
+			{
+				index=i;
+				break;
+			}
+		}
+		// 삭제
+		boardList.remove(index);
+		boardSave(); // 파일 저장
+		return bCheck;
+	}
 	// CURD => DML 
 	// 5. 찾기 => 검색 
 	// => 오라클 => 
 	// 중복 => 저장 / 읽기 => 별도의 메소드로 제작 
 	// 추가 / 수정 / 삭제 
+	// 중복 제거
 	public void boardGetData()
 	{
 		ObjectInputStream ois=null;
