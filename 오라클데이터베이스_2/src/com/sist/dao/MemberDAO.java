@@ -8,7 +8,7 @@ import java.sql.*;
 public class MemberDAO {
 	private Connection conn;
 	private PreparedStatement ps;
-	private final String URL="jdbc:oracle:thin:@localhst:1521:XE";
+	private final String URL="jdbc:oracle:thin:@localhost:1521:XE";
 	private static MemberDAO dao;
 	
 	public MemberDAO()
