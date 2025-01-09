@@ -1,8 +1,8 @@
 package com.sist.vo;
 
 public class DeptVO {
-	private int deptno;
-	private String dname, loc;
+    private int deptno;
+    private String dname,loc;
 	public int getDeptno() {
 		return deptno;
 	}
@@ -21,5 +21,4 @@ public class DeptVO {
 	public void setLoc(String loc) {
 		this.loc = loc;
 	}
-	
 }
