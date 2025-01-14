@@ -46,4 +46,5 @@ public class FreeBoardVO {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
+
 }
