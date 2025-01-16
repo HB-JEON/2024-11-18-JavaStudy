@@ -6,57 +6,52 @@ public class ShoesDAO {
 	private Connection conn;
 	private PreparedStatement ps;
 	private static ShoesDAO dao;
-	private final String URL="jdbc:oracle:thin:@211.238.142.124:1521:XE"; //211.238.142.124
+	private final String URL="jdbc:oracle:thin:@localhost:1521:XE";
 	
-	// 드라이버 등록
 	public ShoesDAO()
 	{
 		try
 		{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			
-		}catch(Exception ex) {}
+		}catch (Exception ex) {}
 	}
-	// conn 한개만 생성
+	
 	public static ShoesDAO newInstance()
 	{
 		if(dao==null)
 			dao=new ShoesDAO();
 		return dao;
 	}
-	// 연결
 	public void getConnection()
 	{
 		try
 		{
 			conn=DriverManager.getConnection(URL,"hr_3","happy");
-		}catch(Exception ex) {}
+		}catch (Exception ex) {}
 	}
-	// 닫기
 	public void disConnection()
 	{
 		try
 		{
 			if(ps!=null) ps.close();
-			if(conn!=null)conn.close();
-		}catch(Exception ex) {}
+			if(conn!=null) conn.close();
+		}catch (Exception ex) {}
 	}
-	public List<ShoesVO> shoesListData(int page)
+	public List<ShoesVO> ShoesListData(int page)
 	{
-		List<ShoesVO>list
-			= new ArrayList<ShoesVO>();
+		List<ShoesVO> list = new ArrayList<ShoesVO>();
 		try
 		{
 			getConnection();
-			String sql="select goods_id,name_kor,img,num "
-					+ "from (select goods_id,name_kor,img,rownum as num "
-					+ "from (select /*+ index_asc(shoes sh_goods_id_pk)*/goods_id,name_kor,img "
-					+ "from shoes)) "
-					+ "where num between ? and ?";
+			String sql="SELECT goods_id,name_kr,img, num "
+					+ "FROM (SELECT goods_id, name_kor, img, rownum as num "
+					+ "FROM (SELECT /*+ INDEX_ASC(shoes sh_goods_id_pk)*/goods_id, name_kor, img"
+					+ "FROM shoes))"
+					+ "WHERE goods_id BETWEEN ? AND ?";
 			ps=conn.prepareStatement(sql);
-			int rowsize=12;
-			int start=(rowsize*page)-(rowsize-1);
-			int end=rowsize*page;
+			int rowSize=12;
+			int start=(rowSize*page)-(rowSize-1);
+			int end=rowSize*page;
 			
 			ps.setInt(1, start);
 			ps.setInt(2, end);
@@ -70,10 +65,9 @@ public class ShoesDAO {
 				vo.setImg(rs.getString(3));
 				list.add(vo);
 			}
-			rs.close();
-			
-		}catch(Exception ex)
-		{
+		   rs.close();
+
+		}catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		finally
@@ -82,30 +76,25 @@ public class ShoesDAO {
 		}
 		return list;
 	}
-	// 총페이지
 	public int shoesTotalPage()
 	{
 		int total=0;
 		try
 		{
 			getConnection();
-			String sql="select ceil(count(*)/12.0) from shoes";
+			String sql="SELECT CEIL(COUNT(*)/12.0) FROM shoes";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
 			rs.next();
 			total=rs.getInt(1);
 			rs.close();
-			
-		}catch(Exception ex) 
-		{
+		}catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		finally
 		{
-			disConnection();	
+			disConnection();
 		}
 		return total;
 	}
-	// 2. 상세보기 => 조회수 증가
-	
 }
