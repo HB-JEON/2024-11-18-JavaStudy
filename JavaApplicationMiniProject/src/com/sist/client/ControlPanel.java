@@ -6,17 +6,27 @@ import java.awt.Image;
 import java.awt.Toolkit;
 
 import javax.swing.*;
+// 화면 변경 
 public class ControlPanel extends JPanel{
-	HomePenal hp;
-	ChatPenal cp;
-	CardLayout card=new CardLayout();
+    HomePenal hp;
+    ChatPenal cp;
+    FoodGenrePenal fgp;
+    FoodFindPenal ffp;
+    FoodDetailPenal fdp;
+    CardLayout card=new CardLayout();
     public ControlPanel()
     {
     	setLayout(card);
     	hp=new HomePenal(this);
-    	add("HOME", hp);
+    	add("HOME",hp);
     	cp=new ChatPenal(this);
-    	add("CHAT", cp);
+    	add("CHAT",cp);
+    	fgp=new FoodGenrePenal(this);
+    	add("FOOD",fgp);
+    	ffp=new FoodFindPenal(this);
+    	add("FIND",ffp);
+    	fdp=new FoodDetailPenal(this);
+    	add("DETAIL",fdp);
     }
     
 }

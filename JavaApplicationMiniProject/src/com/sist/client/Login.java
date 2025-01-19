@@ -1,14 +1,14 @@
 package com.sist.client;
 import java.awt.*;
 import javax.swing.*;
-public class Login extends JFrame {
+public class Login extends JFrame{
 	JLabel la1,la2;
     JTextField tf;
     JPasswordField pf;
     JButton b1,b2;
-    public Login () 
+    public Login()
     {
-        la1=new JLabel("ID");
+    	la1=new JLabel("ID");
         la2=new JLabel("Password");
         tf=new JTextField();
         pf=new JPasswordField();
@@ -32,8 +32,7 @@ public class Login extends JFrame {
         p.setBounds(10, 90, 285, 35);
         add(p);
         
-        setBounds(400, 300, 330, 170);
-        setVisible(true);
+        setBounds(400,300,330, 170);
+        setVisible(true);// 화면 출력
     }
-	
 }

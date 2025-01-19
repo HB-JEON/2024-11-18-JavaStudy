@@ -7,16 +7,29 @@ import java.awt.Toolkit;
 
 import javax.swing.*;
 public class ControlPanel extends JPanel{
-	HomePenal hp;
-	ChatPenal cp;
-	CardLayout card=new CardLayout();
+	HomePanel hp;
+	ChatPanel cp;
+	ShoesBrandPanel sbp;
+    ShoesFindPanel sfp;
+    ShoesDetailPanel sdp;
+    CardLayout card=new CardLayout();
     public ControlPanel()
     {
     	setLayout(card);
-    	hp=new HomePenal(this);
-    	add("HOME", hp);
-    	cp=new ChatPenal(this);
-    	add("CHAT", cp);
+    	hp=new HomePanel(this);
+    	add("HOME",hp);
+    	
+    	cp=new ChatPanel(this);
+    	add("CHAT",cp);
+    	
+    	sbp=new ShoesBrandPanel(this);
+    	add("BRAND",sbp);
+    	
+    	sfp=new ShoesFindPanel(this);
+    	add("FIND",sfp);
+    	
+    	sdp=new ShoesDetailPanel(this);
+    	add("DETAIL",sdp);
     }
-    
+	
 }
