@@ -287,7 +287,7 @@ public class FoodDAO {
 		   return list;
 	   }
 	   /*
-	    *   NAME    NOT NULL VARCHAR2(500)  
+	NAME    NOT NULL VARCHAR2(500)  
 	TYPE    NOT NULL VARCHAR2(100)  
 	PHONE   NOT NULL VARCHAR2(20)   
 	ADDRESS NOT NULL VARCHAR2(700)  
