@@ -176,50 +176,63 @@ implements ActionListener,MouseListener
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-	    for (int i = 0; i < genre.length; i++) {
-	        if (e.getSource() == genre[i]) {
-	            strGenre = genre[i].getText();
-	            curpage = 1;
+	    for (int i=0;i<genre.length;i++) 
+	    {
+	        if (e.getSource()==genre[i]) 
+	        {
+	            strGenre=genre[i].getText();
+	            curpage=1;
 
 	            // "etc" 선택 시 별도 로직 처리
-	            if ("etc".equals(strGenre)) {
+	            if("etc".equals(strGenre)) 
+	            {
 	                totalpage = dao.shoesBrandTotalPageEtc();
 	                init();
 	                List<ShoesVO> list = dao.shoesBrandDataEtc(curpage);
 	                printData(list);
-	            } else {
-	                totalpage = dao.shoesBrandTotalPage(strGenre);
+	            } 
+	            else 
+	            {
+	                totalpage=dao.shoesBrandTotalPage(strGenre);
 	                init();
-	                List<ShoesVO> list = dao.shoesBrandData(curpage, strGenre);
+	                List<ShoesVO> list=dao.shoesBrandData(curpage, strGenre);
 	                printData(list);
 	            }
 	        }
 	    }
 
 	    // 이전
-	    if (e.getSource() == prev) {
-	        if (curpage > 1) {
+	    if (e.getSource()==prev)
+	    {
+	        if (curpage > 1)
+	        {
 	            curpage--;
 	            init();
-	            if ("etc".equals(strGenre)) {
-	                List<ShoesVO> list = dao.shoesBrandDataEtc(curpage);
+	            if ("etc".equals(strGenre))
+	            {
+	                List<ShoesVO> list=dao.shoesBrandDataEtc(curpage);
 	                printData(list);
-	            } else {
-	                List<ShoesVO> list = dao.shoesBrandData(curpage, strGenre);
+	            } else
+	            {
+	                List<ShoesVO> list=dao.shoesBrandData(curpage, strGenre);
 	                printData(list);
 	            }
 	        }
 	    }
 	    // 다음
-	    if (e.getSource() == next) {
-	        if (curpage < totalpage) {
+	    if (e.getSource()==next)
+	    {
+	        if (curpage<totalpage)
+	        {
 	            curpage++;
 	            init();
-	            if ("etc".equals(strGenre)) {
-	                List<ShoesVO> list = dao.shoesBrandDataEtc(curpage);
+	            if ("etc".equals(strGenre))
+	            {
+	                List<ShoesVO> list=dao.shoesBrandDataEtc(curpage);
 	                printData(list);
-	            } else {
-	                List<ShoesVO> list = dao.shoesBrandData(curpage, strGenre);
+	            } else
+	            {
+	                List<ShoesVO> list=dao.shoesBrandData(curpage, strGenre);
 	                printData(list);
 	            }
 	        }

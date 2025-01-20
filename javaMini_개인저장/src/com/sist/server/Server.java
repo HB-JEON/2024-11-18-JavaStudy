@@ -33,7 +33,7 @@ public class Server implements Runnable {
 	// 접속 받기
 	ServerSocket ss;
 	// 연결
-	final int PORT=3355; // 조별 포트번호 1212
+	final int PORT=1212; // 조별 포트번호 1212
 	// port => 0~65535
 	// 0~1023 알려진 포트
 	
